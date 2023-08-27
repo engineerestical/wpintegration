@@ -5,7 +5,7 @@ public class WpTwilioService {
         errorResponseWrapper erw;
         final String fromNumber = '+14155238886'; //Your Twilio Number
         String account = 'ACeb7a9d7f58720f6ee84f9909f8010601';  // Your Account SID 
-        String token   = 'c6c4f0b8914802d80ffeb7ebaf087165'; // Your Auth Token
+        String token   = 'aa3407b279bd1430b1c6ddb5c1281795'; // Your Auth Token
         
         HttpRequest req = new HttpRequest();
         req.setEndpoint('https://api.twilio.com/2010-04-01/Accounts/'+account+'/Messages.json');
