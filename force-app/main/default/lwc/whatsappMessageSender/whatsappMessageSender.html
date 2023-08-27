@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="WhatsApp Message Sender">
+        <div class="slds-var-p-around_medium">
+            <lightning-textarea label="Message" value={message} onchange={handleMessageChange}></lightning-textarea>
+            <lightning-button variant="brand" label="Send Message" onclick={sendMessage}></lightning-button>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Message History">
+        <template if:true={messageHistory}>
+            <ul class="slds-list_dotted">
+                <template for:each={messageHistory} for:item="item">
+                    <li key={item.id}>
+                        <p>{item.message}</p>
+                        <p class="slds-text-color_weak">{item.timestamp}</p>
+                    </li>
+                </template>
+            </ul>
+        </template>
+        <template if:false={messageHistory}>
+            <p class="slds-var-p-horizontal_medium slds-text-color_weak">No message history available.</p>
+        </template>
+    </lightning-card>
+</template>
